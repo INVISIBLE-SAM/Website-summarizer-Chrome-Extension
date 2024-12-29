@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Summary AI</title>
+    <style>
+        body { 
+            width: 400px; 
+            padding: 10px; 
+            font-family: Arial, sans-serif; 
+        }
+        #loading { 
+            color: blue; 
+            display: none; 
+        }
+        #error { 
+            color: red; 
+        }
+        #summary { 
+            margin-top: 10px; 
+            max-height: 200px; 
+            overflow-y: auto; 
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        #summarizeButton {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="summarizeButton">Summarize Page</button>
+    <div id="loading">Generating Summary...</div>
+    <div id="error"></div>
+    <div id="summary"></div>
+    <script src="popup.js"></script>
+</body>
+</html>

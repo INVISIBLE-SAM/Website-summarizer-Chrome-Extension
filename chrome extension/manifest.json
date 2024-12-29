@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Web Summary AI",
+    "version": "1.0.0",
+    "description": "AI-powered web page summarization tool",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "http://localhost:5000/*",
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "Screenshot 2024-12-16 190525.png",
+            "48": "Screenshot 2024-12-16 190525.png",
+            "128": "Screenshot 2024-12-16 190525.png"
+        }
+    },
+    "background": {
+        "service_worker": "src/background/background.js"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["src/content/content.js"]
+    }],
+    "icons": {
+        "16": "Screenshot 2024-12-16 190525.png",
+        "48": "Screenshot 2024-12-16 190525.png",
+        "128": "Screenshot 2024-12-16 190525.png"
+    }
+}
